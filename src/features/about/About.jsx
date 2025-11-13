@@ -1,11 +1,13 @@
+import { FaBalanceScale, FaGem, FaBullseye, FaUsers, FaComments, FaStar } from 'react-icons/fa'
+
 function About() {
   const values = [
-    { title: 'Experience', icon: '⚖️' },
-    { title: 'Honesty', icon: '🤝' },
-    { title: 'Results', icon: '🎯' },
-    { title: 'Community', icon: '🏘️' },
-    { title: 'Free Consultations', icon: '💬' },
-    { title: 'Client Focus', icon: '⭐' },
+    { title: 'Experience', icon: FaBalanceScale },
+    { title: 'Honesty', icon: FaGem },
+    { title: 'Results', icon: FaBullseye },
+    { title: 'Community', icon: FaUsers },
+    { title: 'Free Consultations', icon: FaComments },
+    { title: 'Client Focus', icon: FaStar },
   ]
 
   return (
@@ -69,15 +71,20 @@ function About() {
             Our Values
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {values.map((value, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 text-center"
-              >
-                <div className="text-4xl mb-3">{value.icon}</div>
-                <h4 className="font-semibold text-primary">{value.title}</h4>
-              </div>
-            ))}
+            {values.map((value, index) => {
+              const IconComponent = value.icon
+              return (
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 text-center"
+                >
+                  <div className="text-4xl mb-3 text-accent">
+                    <IconComponent className="mx-auto" />
+                  </div>
+                  <h4 className="font-semibold text-primary">{value.title}</h4>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>
