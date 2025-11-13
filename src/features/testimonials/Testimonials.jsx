@@ -41,7 +41,7 @@ function Testimonials() {
   const currentTestimonial = testimonials[currentIndex]
 
   return (
-    <section id="testimonials" className="py-20 bg-gray-50">
+    <section id="testimonials" className="relative py-20 bg-gray-50" style={{ marginTop: '-1px' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">

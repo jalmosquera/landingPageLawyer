@@ -11,7 +11,7 @@ function About() {
   ]
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="relative py-20 bg-gray-50" style={{ marginTop: '-1px' }}>
       <div className="container mx-auto px-4">
         {/* Introduction */}
         <div className="max-w-4xl mx-auto text-center mb-16">
